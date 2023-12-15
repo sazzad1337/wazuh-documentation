@@ -38,6 +38,8 @@ Wazuh API GUI
 
 On the Wazuh dashboard, navigate to **Server management** > **Dev Tools**. On the **Console**, type the following:
 
+.. deprecated:: 4.9
+
 .. code-block:: none
 
    GET /syscollector/<AGENT_ID>/
@@ -55,6 +57,8 @@ The Wazuh dashboard will suggest a list of available tables that you can query v
 For example, you can use the command ``GET /syscollector/<AGENT_ID>/packages`` to query the inventory data for installed packages on the endpoint. After typing, click the play icon to run the query.
 
 Furthermore, you can query the inventory data for specific information about any property. For example, the command below queries the package inventory to check for the ``wazuh-agent`` package: 
+
+.. deprecated:: 4.9
 
 .. code-block:: none
 
@@ -94,6 +98,8 @@ Follow the steps below to query the endpoint database from the command line usin
 
 - Query the endpoint information of interest using a command which takes the following format:
 
+   .. deprecated:: 4.9
+    
    .. code-block:: console
 
       curl -k -X GET "https://<WAZUH_SERVER_IP>:55000/syscollector/<AGENT_ID>/<SYSCOLLECTOR_PROPERTY>?pretty=true" -H "Authorization: Bearer $TOKEN"
